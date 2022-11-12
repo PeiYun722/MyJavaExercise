@@ -4,7 +4,7 @@ public class Game_1A2B {
 		// TODO Auto-generated method stub
 		Scanner input=new Scanner(System.in);
 		String[] bomb=new String[4];
-		Arrays.fill(bomb, "10");//°}¦C¹w³]­È¬°0¡AÁ×§K²£¥Í¥Xªº­È¨S¦³0¡A¬G¥ı±N°}¦C¶ñ¸É¤j©ó9ªº¼Æ¦r
+		Arrays.fill(bomb, "10");//é™£åˆ—é è¨­å€¼ç‚º0ï¼Œé¿å…ç”¢ç”Ÿå‡ºçš„å€¼æ²’æœ‰0ï¼Œæ•…å…ˆå°‡é™£åˆ—å¡«è£œå¤§æ–¼9çš„æ•¸å­—
 		for(int i=0;i<4;i++) {
 			String temp=Integer.toString((int)(Math.random()*10));
 			repeat:
@@ -18,42 +18,42 @@ public class Game_1A2B {
 				break;
 			}	
 			bomb[i]=temp;
-		}//²£¥Í4­Ó¥Ñ0~9²Õ¦¨ªº¼Æ¦r¡A¥B¤£¯à­«½Æ
+		}//ç”¢ç”Ÿ4å€‹ç”±0~9çµ„æˆçš„æ•¸å­—ï¼Œä¸”ä¸èƒ½é‡è¤‡
 		String newBomb=String.join("", bomb);
 		for(String a:bomb)System.out.print(a);
 		System.out.println();
 
 		System.out.println();
-		System.out.print("1A2B¹CÀ¸¶}©l!!"
-				+ "\n³W«h:µª®×¥Ñ¥|­Ó0~9ªº¼Æ¦r²Õ¦¨¡A¥B¤£¯à­«½Æ¡C"
-				+ "\n¼Æ¦r¥¿½T¥B¦ì¸m¥¿½T¡Aµ²ªG¬°A"
-				+ "\n¼Æ¦r¥¿½T¦ı¦ì¸m¤£¹ï¡Aµ²ªG¬°B"
-				+ "\n\n¹CÀ¸¶}©l¡A½Ğ¿é¤J±zªº²q´ú¼Æ¦r:");//³W«h
+		System.out.print("1A2BéŠæˆ²é–‹å§‹!!"
+				+ "\nè¦å‰‡:ç­”æ¡ˆç”±å››å€‹0~9çš„æ•¸å­—çµ„æˆï¼Œä¸”ä¸èƒ½é‡è¤‡ã€‚"
+				+ "\næ•¸å­—æ­£ç¢ºä¸”ä½ç½®æ­£ç¢ºï¼Œçµæœç‚ºA"
+				+ "\næ•¸å­—æ­£ç¢ºä½†ä½ç½®ä¸å°ï¼Œçµæœç‚ºB"
+				+ "\n\néŠæˆ²é–‹å§‹ï¼Œ");//è¦å‰‡
 		
 		repeat2:
 		while(true) {
-			System.out.print("½Ğ¿é¤J¼Æ¦r:");
+			System.out.print("è«‹è¼¸å…¥æ•¸å­—:");
 			String ans=input.nextLine();
 			int A=0;
 			int B=0; 
 			
-			//¤ñ¹ï¬O§_¬°¥|¦ì¼Æ
+			//æ¯”å°æ˜¯å¦ç‚ºå››ä½æ•¸
 			if(ans.length()!=4) {
-				System.out.println("¿é¤J¼Æ­È¤£¬°¥|¦ì¼Æ!");
+				System.out.println("è¼¸å…¥æ•¸å€¼ä¸ç‚ºå››ä½æ•¸!");
 				continue repeat2;
 			}
-			//¤ñ¹ï¬O§_¬°¼Æ­È¸ê®Æ
+			//æ¯”å°æ˜¯å¦ç‚ºæ•¸å€¼è³‡æ–™
 			for(int i=0;i<ans.length();i++) {
 				if(Character.isDigit(ans.charAt(i))==false) {
-					System.out.println("¿é¤J¼Æ­È¤£¯à¬°«D¼Æ¦r!");
+					System.out.println("è¼¸å…¥æ•¸å€¼ä¸èƒ½ç‚ºéæ•¸å­—!");
 					continue repeat2;
 				}
 			}
-			//¤ñ¹ï¬O§_¦³­«½Æ¼Æ¦r
+			//æ¯”å°æ˜¯å¦æœ‰é‡è¤‡æ•¸å­—
 			for(int i=0;i<ans.length()-1;i++) {
 				for(int a=i+1;a<ans.length();a++) {
 					if(ans.charAt(i)==ans.charAt(a)) {
-						System.out.println("¿é¤J¼Æ­È¤£¯à­«½Æ!");
+						System.out.println("è¼¸å…¥æ•¸å€¼ä¸èƒ½é‡è¤‡!");
 						continue repeat2;
 					}
 				}
@@ -70,7 +70,7 @@ public class Game_1A2B {
 			}
 			System.out.println(A+"A"+B+"B");
 			if(A==4) {
-				System.out.print("¥¿½Tµª®×!!");
+				System.out.print("æ­£ç¢ºç­”æ¡ˆ!!");
 				break;
 			} else continue repeat2;
 		}	
